@@ -1,0 +1,79 @@
+# Site Settings
+timezone  : "America/Sao_Paulo"
+locale    : "pt-BR"
+
+# Build Options
+
+defaults:
+  -
+    values:
+      layout: "default"
+      authors: "Fernando Sávio"
+
+
+# Keep original, do not replace
+title                    : "Fernando Sávio Blog"
+title_separator          : "-"
+name                     : "Fernando Sávio"
+description              : "Dump mental de coisas sobre programação e estudos."
+# baseurl                  : "" # the subpath of your site, e.g. "/blog"
+#gh_repo                  :
+#teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+# breadcrumbs              : true # true, false (default)
+# words_per_minute         : 200
+# comments:
+#   provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", custom"
+#   disqus:
+#     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+#   discourse:
+#     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+#   facebook:
+#     # https://developers.facebook.com/docs/plugins/comments
+#     appid                :
+#     num_posts            : # 5 (default)
+#     colorscheme          : # "light" (default), "dark"
+
+
+
+
+# analytics:
+#   provider               : google # false (default), "google", "google-universal", "custom"
+#   google:
+#     tracking_id          : UA-80557370-2
+
+# markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+# markdown: kramdown
+# highlighter: rouge
+# lsi: false
+# excerpt_separator: "\n\n"
+
+# standard jekyll configuration
+
+# permalink: /articles/:title/
+# gems:
+#   - jekyll-paginate
+#   - jekyll-sitemap
+#   - jekyll-gist
+#   - jekyll-feed
+#   - jemoji
+
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
+
+# collections:
+#   modules:
+#     output: true
+#   courses:
+#     output: true
+
+# include:
+# - _stylesheets
+# - _javascript
+
+# sass:
+#   sass_dir: assets/_scss
+#   style: :compressed
