@@ -2,7 +2,7 @@
 title: Fernando Sávio Blog
 description: Dump mental de coisas sobre programação e estudos.
 title_separator: "-"
-url: https://fernandosavio.github.io/
+url: https://fernandosavio.github.io
 logo: logo.png                                       # Site logo
 locale: pt_BR
 timezone  : America/Sao_Paulo
