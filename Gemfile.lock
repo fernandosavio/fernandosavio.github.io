@@ -194,6 +194,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 138)
+  jekyll-feed
+  jekyll-gist
+  jekyll-sitemap
 
 BUNDLED WITH
    1.15.0
