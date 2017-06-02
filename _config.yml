@@ -1,10 +1,10 @@
 # Site
-title: Fernando Sávio Blog
-description: Dump mental de coisas sobre programação e estudos.
+title: Fernando Sávio
+description: Meu cantinho para guardar pensamentos sobre meus estudos e trabalhos.
 title_separator: "-"
 url: https://fernandosavio.github.io
 logo: logo.png                                       # Site logo
-locale: pt_BR
+locale: pt-BR
 timezone  : America/Sao_Paulo
 
 # Left Block Images
@@ -14,7 +14,7 @@ background:
   default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
-permalink:          /:title/
+permalink:          /:title
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
@@ -27,15 +27,26 @@ sass:
   sass_dir:         assets/_sass
   style:            compressed
 
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+
+
 # Google Analytics
 #google-analytics: UA-XXXXX-Y
 
 # Social Links
 email:              fernandosavio86@gmail.com
-google.plus:        +FernandoSávio
+google.plus:        FernandoSávio
 twitter:            fernandosavio86
 facebook:           fernandosavio86
-github:             username
+github:             fernandosavio
 stackoverflow:      1284458/fernandosavio
 #linkedin:          username
 #xing:              username
