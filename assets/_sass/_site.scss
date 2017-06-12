@@ -562,12 +562,22 @@ canvas {
   h6 {
     font-weight: bold;
     color: rgba($overlay-color, 0.7);
+
+    & > small {
+      display: inline;
+      margin-left: 5px;
+      font-size: 0.7em;
+      font-weight: normal;
+    }
   }
   p {
     font-size: 18px;
     line-height: 1.6;
     color: #6c6c6c;
     margin-bottom: 1.3em;
+  }
+  em {
+    font-style: italic;
   }
   small {
     color: darken($white, 40);
