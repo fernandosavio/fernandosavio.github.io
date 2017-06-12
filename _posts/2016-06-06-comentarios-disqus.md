@@ -57,7 +57,7 @@ Bora lá, começando pela famigerada tag `<spoiler>`!
 
 ---
 
-## Spoiler<small>(&lt;spoiler&gt;)</small>
+## &lt;spoiler&gt;
 **Código**:
 ```html
 Lorem ipsum dolor sit amet, <spoiler>consectetur</spoiler> adipiscing 
@@ -67,11 +67,9 @@ elit. Quisque quis tellus lectus.
 
 ![Resultado para a tag spoiler]({{ site.url }}/images/disqus/disqus_spoiler_tag.gif)
 
-<!-- Lorem ipsum dolor sit amet, <spoiler>consectetur</spoiler> adipiscing elit. Quisque quis tellus lectus. -->
-
 ---
 
-## Hyperlinks<small>(&lt;a&gt;)</small>
+## &lt;a&gt;
 
 **Código**:
 ```html
@@ -84,9 +82,7 @@ adipiscing elit. Quisque quis tellus lectus.
 
 ---
 
-<!-- Lorem ipsum dolor sit amet, <a href="https://mussumipsum.com/">consectetur</a> adipiscing elit. Quisque quis tellus lectus. -->
-
-## Negrito<small>(&lt;strong&gt; ou &lt;b&gt;)</small>
+## &lt;strong&gt; ou &lt;b&gt;
 
 **Código**:
 ```html
@@ -95,13 +91,11 @@ elit. <b>Quisque</b> quis tellus lectus.
 ```
 **Resultado**:
 
-<!-- Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit. Quisque quis tellus lectus. -->
-
 ![Resultado para a tag strong]({{ site.url }}/images/disqus/disqus_strong_tag.png)
 
 ---
 
-## Itálico<small>(&lt;em&gt; ou &lt;i&gt;)</small>
+## &lt;em&gt; ou &lt;i&gt;
 
 **Código**:
 ```html
@@ -110,14 +104,12 @@ elit. <i>Quisque</i> quis tellus lectus.
 ```
 **Resultado**:
 
-<!-- Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipiscing elit. Quisque quis tellus lectus. -->
-
 ![Resultado para a tag em]({{ site.url }}/images/disqus/disqus_emphasis_tag.png)
 
 ---
 
 
-## Riscado<small>(&lt;strike&gt; ou &lt;s&gt;)</small>
+## &lt;strike&gt; ou &lt;s&gt;
 
 **Código**:
 ```html
@@ -126,14 +118,12 @@ elit. <s>Quisque</s> quis tellus lectus.
 ```
 **Resultado**:
 
-<!-- Lorem ipsum dolor sit amet, <strike>consectetur</strike> adipiscing elit. <s>Quisque</s> quis tellus lectus. -->
-
 ![Resultado para a tag strike]({{ site.url }}/images/disqus/disqus_strike_tag.png)
 
 ---
 
 
-## Citações<small>(&lt;blockquote&gt;)</small>
+## &lt;blockquote&gt;
 
 **Código**:
 ```html
@@ -144,107 +134,12 @@ Quisque quis tellus lectus.
 ```
 **Resultado**:
 
-<!-- <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis tellus lectus.</blockquote> -->
-
 ![Resultado para a tag blockquote]({{ site.url }}/images/disqus/disqus_blockquote_tag.png)
 
 ---
 
 
-<!--
-
-## Menções<small>(&lt;cite&gt;)</small>
-
-**Código**:
-```html
-<cite>Lorem ipsum é um texto utilizado para preencher o espaço 
-de texto em publicações (jornais, revistas, e websites), com a 
-finalidade de verificar o lay-out, tipografia e formatação antes 
-de utilizar conteúdo real.</cite>
-```
-**Resultado**:
-
-<cite>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis tellus lectus.</cite>
-
-
-## Legenda de tabela<small>(&lt;caption&gt;)</small>
-
-```html
-<table>
-    <caption>Legenda da Tabela</caption>
-    <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
-    </tr>
-    <tr>
-        <td>Cell 1</td>
-        <td>Cell 2</td>
-        <td>Cell 3</td>
-    </tr>
-    <tr>
-        <td>Cell 4</td>
-        <td>Cell 5</td>
-        <td>Cell 6</td>
-    </tr>
-</table>
-```
-
-**Resultado**:
-
-<table>
-    <caption>Legenda da Tabela</caption>
-    <tr>
-        <th>Header 1</th>
-        <th>Header 2</th>
-        <th>Header 3</th>
-    </tr>
-    <tr>
-        <td>Cell 1</td>
-        <td>Cell 2</td>
-        <td>Cell 3</td>
-    </tr>
-    <tr>
-        <td>Cell 4</td>
-        <td>Cell 5</td>
-        <td>Cell 6</td>
-    </tr>
-</table>
-
-
-## Parágrafos<small>(&lt;p&gt;)</small>
-
-*Código*:
-```html
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing 
-elit. Quisque quis tellus lectus. Fusce egestas magna 
-quis ligula tempus scelerisque.</p>
-```
-
-*Resultado*:
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing 
-elit. Quisque quis tellus lectus. Fusce egestas magna 
-quis ligula tempus scelerisque.</p>
-
-
-
-## Span<small>(&lt;span&gt;)</small>
-
-*Código*:
-```html
-Lorem ipsum dolor sit amet, consectetur adipiscing 
-elit. Quisque quis tellus lectus. <span>Fusce egestas 
-magna quis ligula</span> tempus scelerisque.
-```
-
-*Resultado*:
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis tellus lectus. <span>Fusce egestas magna quis ligula</span> tempus scelerisque.
-
--->
-
-## Códigos e Syntax Highlighting<small>(&lt;pre&gt; e &lt;code&gt;)</small>
+## &lt;pre&gt; e &lt;code&gt;
 
 *Código*:
 ```html
@@ -258,16 +153,6 @@ def fib(n):
 print fib(5)
 </code></pre>
 ```
-
-<!-- <pre><code class="python">
-## Fibonacci using recursion
-def fib(n):
-    if n==1 or n==2:
-        return 1
-    return fib(n-1)+fib(n-2)
-
-print fib(5)
-</code></pre> -->
 
 
 Escapando HTML nos códigos:
@@ -284,10 +169,6 @@ egestas&#60;/strike&#62; magna quis ligula tempus scelerisque.
 *Resultado*:
 
 ![Resultado para a tag code]({{ site.url }}/images/disqus/disqus_code_tag.png)
-
-<!-- <pre><code class="html">
-Lorem ipsum dolor sit amet, &#60;strong&#62;consectetur&#60;/strong&#62; adipiscing elit. Quisque quis tellus lectus. &#60;strike&#62;Fusce egestas&#60;/strike&#62; magna quis ligula tempus scelerisque.
-</code></pre> -->
 
 ---
 
