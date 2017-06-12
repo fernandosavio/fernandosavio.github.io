@@ -5,6 +5,8 @@ excerpt: "Uma 'documentação' pessoal das tags aceitas pelo Disqus"
 tags: 
   - disqus
   - comentarios
+  - html
+
 ---
 
 # Disqus: usando tags HTML
