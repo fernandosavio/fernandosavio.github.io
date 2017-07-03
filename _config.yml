@@ -36,6 +36,7 @@ defaults:
       type: "posts"
     values:
       comments: true
+      mathjax: false
 
 
 # Google Analytics
