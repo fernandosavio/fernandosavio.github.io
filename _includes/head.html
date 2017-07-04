@@ -6,6 +6,10 @@
   {% assign bg_post_list = site.data.backgrounds[site.background.post-list] %}
   {% assign bg_post = site.data.backgrounds[page.image] %}
 
+  {% if page.image == blank %}
+    {% assign bg_post = site.data.backgrounds[jakku] %}
+  {% endif%}
+
   {% if page.title %}
     <title>{{ page.title | markdownify | strip_html | strip_newlines | escape_once }} &#8211; {{ site.title }}</title>
   {% else %}

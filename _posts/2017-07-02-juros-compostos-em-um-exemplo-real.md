@@ -3,6 +3,7 @@ layout: post
 title: "Juro composto aplicado a um exemplo real"
 excerpt: "Resolução de um problema proposto na plataforma repl.it com juros compostos."
 mathjax: true
+redirect_from: "/juros-compostos-replit-student"
 tags: 
   - python
   - juros-compostos
