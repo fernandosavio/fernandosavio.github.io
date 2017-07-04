@@ -1,0 +1,41 @@
+jakku:
+  url: images/bg_jakku.jpg
+  width: 2585
+  height: 1100
+  mime_type: image/jpeg
+
+endor:
+  url: images/bg_endor.jpg
+  width: 1600
+  height: 1067
+  mime_type: image/jpeg
+
+tatooine:
+  url: images/bg_tatooine.jpg
+  width: 2200
+  height: 1100
+  mime_type: image/jpeg
+
+tatooine_2:
+  url: images/bg_tatooine_2.jpg
+  width: 1659
+  height: 1100
+  mime_type: image/jpeg
+
+ewok_village:
+  url: images/bg_ewokvillage.jpg
+  width: 1467
+  height: 1100
+  mime_type: image/jpeg
+
+fractal:
+  url: images/bg_fractal_blur.jpg
+  width: 1080
+  height: 1920
+  mime_type: image/jpeg
+
+space:
+  url: images/bg_space.jpg
+  width: 1600
+  height: 1067
+  mime_type: image/jpeg
