@@ -3,6 +3,7 @@
   .content {
     z-index: 1;
     position: relative;
+    height: auto;
   }
 }
 
@@ -22,12 +23,15 @@
   }
   .content {
     height: 100%;
-    box-shadow: inset 0 0 3em rgba(0,0,0,0.5);
   }
 }
 
 .block-left {
   width: 40%;
+
+  .content {
+    box-shadow: inset 0 0 3em rgba(0,0,0,0.5);
+  }
 }
 
 .block-right {
@@ -41,7 +45,6 @@
 
 .content {
   padding: 60px;
-  // max-width: 600px;
   margin: 0 auto;
 }
 
@@ -544,6 +547,8 @@ canvas {
 }
 
 .inner-post {
+  box-shadow: inset 0 0 3em rgba(0,0,0,0.5);
+  
   h1 {
     font-size: 55px;
     line-height: 55px;
