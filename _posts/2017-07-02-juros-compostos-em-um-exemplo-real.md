@@ -2,18 +2,18 @@
 layout: post
 title: "Juro composto aplicado a um exemplo real"
 excerpt: "Resolução de um problema proposto na plataforma repl.it com juros compostos."
-tags: 
-  - replit
-  - juros-compostos
-  - python
-
 mathjax: true
-
+tags: 
+  - python
+  - juros-compostos
+  - lógica
+  - matemática
 ---
 
 # Juro composto aplicado a um exemplo real
 
 > [TL;DR](#tldr)
+
 
 ## Introdução
 

@@ -4,7 +4,7 @@ description: Repositórios de qualquer coisa que me chame a atenção.
 title_separator: "-"
 url: https://fernandosavio.github.io
 logo: logo.png                                       # Site logo
-locale: pt-BR
+locale: pt_BR
 timezone  : America/Sao_Paulo
 
 # Left Block Images
@@ -37,6 +37,7 @@ defaults:
     values:
       comments: true
       mathjax: false
+      image: images/bg_jakku.jpg
 
 
 # Google Analytics
