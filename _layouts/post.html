@@ -29,18 +29,15 @@ layout: compress
       <div class="share-buttons">
         {% include share.html %}
       </div>
-      <a href="{{ site.url }}/artigos.html" title="posts" class="posts-menu-icon"></a>
-      <a title="projects" class="projects-menu-icon">
-        <span></span>
-      </a>
+      
       <div class="inner-post content">
-        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%-d/%m/%Y' }}{% else %}&#x2756;{% endif %}</div>
-        {{ content }}
-        <br>
-        {% include share.html %}
-        {% include page-pagination.html %}
-        <hr>
-        {% include disqus_comments.html %}
+        <div class="date-highlight">{% if page.date %}<time datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>{% else %}&#x2756;{% endif %}</div>
+          {{ content }}
+          <br>
+          {% include share.html %}
+          {% include page-pagination.html %}
+          <hr>
+          {% include disqus_comments.html %}
       </div>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
