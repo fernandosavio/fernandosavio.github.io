@@ -72,6 +72,10 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
 
+  {% if page.is_post %}
+    {% include json-ld.html %}
+  {% endif %}
+
   <!-- Feed -->
   {% feed_meta %}
   <!-- Favicons -->

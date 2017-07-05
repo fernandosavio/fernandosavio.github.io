@@ -37,6 +37,7 @@ defaults:
     values:
       comments: true
       mathjax: false
+      is_post: true
       image: jakku
 
 

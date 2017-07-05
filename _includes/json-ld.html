@@ -1,0 +1,53 @@
+{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+
+{% assign str_image = page.image | default: site.background.default-post %}
+{% assign post_image = site.data.backgrounds[str_image] %}
+  
+{% if post_image %}
+  {% capture image %}{{ post_image.url }}{% endcapture %}
+  {% unless image contains 'http://' or image contains 'https://' %}
+    {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+  {% endunless %}
+{% endif %}
+
+<!-- JSON-LD Markup -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ canonical }}"
+    },
+    "headline": "{{ page.title | markdownify | strip_html | strip_newlines | escape_once | truncate: 110, "" }}",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ image }}",
+      "width": {{ post_image.width }},
+      "height": {{ post_image.height }}
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "Fernando Sávio",
+      "email": "fernandosavio86@gmail.com",
+      "jobTitle": "WebDeveloper",
+      "nationality": {
+        "@type": "Country",
+        "name": "Brazil"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fernando Sávio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/images/logo_60x60.png",
+        "width": 60,
+        "height": 60
+      }
+    },
+    "description": "{{ site.description }}"
+  }
+</script>
