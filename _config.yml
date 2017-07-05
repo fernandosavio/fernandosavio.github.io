@@ -41,7 +41,7 @@ defaults:
 
 
 # Google Analytics
-#google-analytics: UA-XXXXX-Y
+google-analytics: UA-49723510-2
 
 # Social Links
 email:              fernandosavio86@gmail.com
