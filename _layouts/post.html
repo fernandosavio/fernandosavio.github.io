@@ -26,15 +26,12 @@ layout: compress
     </div>
 
     <div class="block-right">
-      <div class="share-buttons">
-        {% include share.html %}
-      </div>
-      
       <div class="inner-post content">
+        <div class="addthis_inline_share_toolbox" style="text-align: center;"></div>
         <div class="date-highlight">{% if page.date %}<time datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>{% else %}&#x2756;{% endif %}</div>
           {{ content }}
           <br>
-          {% include share.html %}
+          <div class="addthis_inline_share_toolbox" style="text-align: center;"></div>
           {% include page-pagination.html %}
           <hr>
           {% include disqus_comments.html %}
@@ -45,8 +42,8 @@ layout: compress
       anchors.options.placement = 'left';
       anchors.add('.inner-post h1, .inner-post h2, .inner-post h3, .inner-post h4');
     </script>
-
     {% include scripts.html %}
-    {% include overlay.html %}                            
+    {% include overlay.html %}
+    <script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-595e30a1a6e1f794"></script>
 </body>
 </html>
