@@ -10,10 +10,9 @@ tags:
   - lógica
   - matemática
 ---
-
-# Juro composto aplicado a um exemplo real
-
-> [TL;DR](#tldr)
+<div class="notice_info" markdown="1">
+[TL;DR](#tldr)
+</div>
 
 
 ## Introdução
