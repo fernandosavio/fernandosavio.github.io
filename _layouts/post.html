@@ -7,12 +7,12 @@ layout: compress
 {% include head.html %}
 <body id="posts" class="inner-post-page">
 
-    <div class="block-left">
+    <header class="block-left">
       <div class="content">
         <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
         <div class="post-title-section">
           <div class="section-line">Artigos <em>/</em></div>
-          <h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+          <h1 id="post-title" class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
           <ul class="fancy-tags">
             {% for tag in page.tags %}
               <li><a class="fancy-tag" href="{{ site.url }}/tags#{{ tag }}">{{ tag }}</a></li>
@@ -23,19 +23,21 @@ layout: compress
           <div class="section-line reverse"><a href="{{ site.url}}">Voltar para artigos</a> <em>/</em></div>
         </div>
       </div>
-    </div>
+    </header>
 
     <div class="block-right">
-      <div class="inner-post content">
+      <main class="inner-post content" role="main" aria-labelledby="post-title">
         <div class="addthis_inline_share_toolbox" style="text-align: center; height: 48px;"></div>
-        <div class="date-highlight">{% if page.date %}<time datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>{% else %}&#x2756;{% endif %}</div>
+        <article>
+          <div class="date-highlight">{% if page.date %}<time datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>{% else %}&#x2756;{% endif %}</div>
           {{ content }}
-          <br>
-          <div class="addthis_inline_share_toolbox" style="text-align: center;"></div>
-          {% include page-pagination.html %}
-          <hr>
-          {% include disqus_comments.html %}
-      </div>
+        </article>
+        <br>
+        <div class="addthis_inline_share_toolbox" style="text-align: center;"></div>
+        {% include page-pagination.html %}
+        <hr>
+        {% include disqus_comments.html %}
+      </main>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
     <script type="text/javascript">
