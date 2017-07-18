@@ -1,0 +1,86 @@
+body {
+    font-size: 20px;
+    font-family: $base-font;
+    color: $overlay-color;
+    background-color: #F8F8F8;
+    background-image: url(/images/bg_tiles.png)
+}
+
+a {
+  color: $overlay-color;
+  outline: none;
+  text-decoration: none
+}
+
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: $overlay-color
+}
+
+main {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    background-size: cover;
+    height: 80vh;
+    box-shadow: 0 10px 20px black;
+    overflow: hidden;
+    text-shadow: 0 -5px 5px black;
+    color: #CCC;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    & > .logo {
+        display: inline-block;
+        flex: 0 0 200px;
+    }
+
+    & > h2 {
+        flex: 0 0 3rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    & > h3 {
+        flex: 0 0 3rem;
+        font-size: 1.2rem;
+        margin: 0 1rem;
+    }
+}
+
+footer {
+    height: 3rem;
+}
+
+.tags {
+    list-style: none;
+    font-size: 0.8rem;
+
+    .tag {
+        display: inline-block;
+        background: $green;
+        border-radius: 3px;
+        padding: 5px;
+        box-shadow: 3px 3px rgba(0,0,0,0.1);
+        margin: 2px;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        &:hover {
+          background-color: darken($green, 10%);
+          text-decoration: none;
+          color: white;
+        }
+    }
+}

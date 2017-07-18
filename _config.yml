@@ -3,14 +3,14 @@ title: Fernando Sávio
 description: Repositórios de qualquer coisa que me chame a atenção.
 title_separator: "-"
 url: https://fernandosavio.github.io
-logo: logo.png                                       # Site logo
+logo: logo.png
 locale: pt_BR
 timezone  : America/Sao_Paulo
 
 # Left Block Images
 background:
   homepage: jakku
-  post-list: tatooine
+  post-list: jakku
   default-post: jakku
 
 # Jekyll

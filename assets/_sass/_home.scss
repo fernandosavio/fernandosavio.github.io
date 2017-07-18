@@ -1,0 +1,28 @@
+
+
+.post-list {
+    list-style: none;
+
+    & > li {
+        padding: 1.2rem 0;
+        border-bottom: 1px dotted $gray;
+
+        .post-title {
+            font-size: 2rem;
+        }
+        .post-date {
+            font-size: 1rem;
+            float: right;
+            color: $muted;
+            margin: 0.3rem 0 0 0.3rem;
+        }
+        .post-excerpt {
+            font-size: 1rem;
+            color: $muted;
+            margin-bottom: 1rem;
+        }
+
+    }
+}
+
+
