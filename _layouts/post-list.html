@@ -31,13 +31,11 @@ layout: compress
               <a href="{{ site.url }}{{ post.url }}" class="post-title">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
             </h2>
             <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-            <ul class=tags>
+            <div>
               {% for tag in post.tags %}
-                <li class=tag>
                   <a href="#">#{{ tag }}</a>
-                </li>
               {% endfor %}
-            </ul>
+            </div>
           </article>
         </li>
       {% endfor %}
@@ -46,8 +44,3 @@ layout: compress
   <footer></footer>
 </body>
 </html>
-
-<!--
-http://guide.bash.academy/commands/#
-https://jonassebastianohlsson.com/criticalpathcssgenerator/
--->

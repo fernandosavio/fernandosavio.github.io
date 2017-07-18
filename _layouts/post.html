@@ -8,10 +8,13 @@ layout: compress
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{{ site.title }}</title>
+
+    {% include metadata.html %}
+
     <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/post.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Martel:400,700" rel="stylesheet">
+    {% comment %}<link href="https://fonts.googleapis.com/css?family=Martel:400,700" rel="stylesheet">{% endcomment %}
 </head>
 <body id="homepage">
   {% assign page_img = page.image | default: site.background.default-post %}
@@ -26,23 +29,44 @@ layout: compress
   <main>
       <article>
             <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: '%d/%m/%Y' }}</time>
-            <h1 id="post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1><
-            <ul class=tags>
-              {% for tag in post.tags %}
-                <li class=tag>
-                  <a href="#">#{{ tag }}</a>
-                </li>
+            <h1 id="post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+            <div>
+              Tags:
+              {% for tag in page.tags %}
+                <a class=tag href="#">#{{ tag }}</a>
               {% endfor %}
-            </ul>
-            <hr>
+            </div>
+            <hr style="margin-bottom: 1rem;">
+            
             {{ content }}
       </article>
+      {% include disqus_comments.html %}
   </main>
   <footer></footer>
+  {% if page.mathjax %}
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML"></script>
+  {% endif %}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+  <script type="text/javascript">
+    anchors.options.placement = 'right';
+    anchors.add('article h2, article h3, article h4');
+  </script>
+  {% if site.google-analytics %}
+    <!-- Asynchronous Google Analytics snippet -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google-analytics }}', 'auto');  
+      ga('require', 'linkid', 'linkid.js');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
 </body>
 </html>
 
-<!--
+{% comment %}
 http://guide.bash.academy/commands/#
 https://jonassebastianohlsson.com/criticalpathcssgenerator/
--->
+{% endcomment %}

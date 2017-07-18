@@ -9,9 +9,6 @@ tags:
 
 ---
 
-# Disqus: usando tags HTML
-
-
 Tenho visto muita gente "alertando" seus spoilers nos comentários do [Disqus] de vários sites da seguinte maneira:
 
 ```
@@ -57,7 +54,6 @@ Enfim, decidi documentar aqui no meu blog para facilitar minha vida (e de mais a
 
 Bora lá, começando pela famigerada tag `<spoiler>`!
 
----
 
 ## &lt;spoiler&gt;
 **Código**:
@@ -69,7 +65,6 @@ elit. Quisque quis tellus lectus.
 
 ![Resultado para a tag spoiler]({{ site.url }}/images/disqus/disqus_spoiler_tag.gif)
 
----
 
 ## &lt;a&gt;
 
@@ -82,7 +77,7 @@ adipiscing elit. Quisque quis tellus lectus.
 
 ![Resultado para a tag a]({{ site.url }}/images/disqus/disqus_link_tag.png)
 
----
+
 
 ## &lt;strong&gt; ou &lt;b&gt;
 
@@ -95,7 +90,7 @@ elit. <b>Quisque</b> quis tellus lectus.
 
 ![Resultado para a tag strong]({{ site.url }}/images/disqus/disqus_strong_tag.png)
 
----
+
 
 ## &lt;em&gt; ou &lt;i&gt;
 
@@ -108,7 +103,7 @@ elit. <i>Quisque</i> quis tellus lectus.
 
 ![Resultado para a tag em]({{ site.url }}/images/disqus/disqus_emphasis_tag.png)
 
----
+
 
 
 ## &lt;strike&gt; ou &lt;s&gt;
@@ -122,7 +117,7 @@ elit. <s>Quisque</s> quis tellus lectus.
 
 ![Resultado para a tag strike]({{ site.url }}/images/disqus/disqus_strike_tag.png)
 
----
+
 
 
 ## &lt;blockquote&gt;
@@ -138,7 +133,7 @@ Quisque quis tellus lectus.
 
 ![Resultado para a tag blockquote]({{ site.url }}/images/disqus/disqus_blockquote_tag.png)
 
----
+
 
 
 ## &lt;pre&gt; e &lt;code&gt;
@@ -172,7 +167,7 @@ egestas&#60;/strike&#62; magna quis ligula tempus scelerisque.
 
 ![Resultado para a tag code]({{ site.url }}/images/disqus/disqus_code_tag.png)
 
----
+
 
 *PS: as tags `<cite>`, `<span>`, `<p>`, `<caption>` e `<table>` não foram incluídas no post por não ter efeito aparente nos testes.*
 

@@ -10,9 +10,10 @@ tags:
   - lógica
   - matemática
 ---
-<div class="notice_info" markdown="1">
-[TL;DR](#tldr)
-</div>
+
+
+> [TL;DR](#tldr)
+
 
 
 ## Introdução
@@ -213,7 +214,6 @@ print(ceil(n) + 1)
 
 Como é o primeiro artigo que escrevo, não sei se ficou muito longo, detalhado e chato, mas como queria guardar esse tipo de experiência, espero que sirva de alguma coisa para outras pessoas também.
 
----
 
 ## TL;DR
 
@@ -238,14 +238,14 @@ print(num_days)
 
 Novo código:
 
-```python
+{% highlight python %}
 from math import log, ceil
 
 v_p, v_f = int(input()), int(input())
 n = log(v_p/v_f, 1.1)
 
 print(ceil(n) + 1)
-```
+{% endhighlight %}
 
 [CodePen]: https://codepen.io/
 [JSFiddle]: https://jsfiddle.net/

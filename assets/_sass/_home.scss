@@ -9,6 +9,7 @@
 
         .post-title {
             font-size: 2rem;
+            color: $overlay-color;
         }
         .post-date {
             font-size: 1rem;
@@ -20,6 +21,7 @@
             font-size: 1rem;
             color: $muted;
             margin-bottom: 1rem;
+            margin-left: 0.3rem;
         }
 
     }
