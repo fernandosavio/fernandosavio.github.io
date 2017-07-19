@@ -27,14 +27,15 @@ layout: compress
   </header>
   <main>
       <article>
-            <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: '%d/%m/%Y' }}</time>
             <h1 id="post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
             <div>
+              <time class="post-date" datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>
               Tags:
               {% for tag in page.tags %}
                 <a class=tag href="{{ site.url }}/tags#{{ tag }}">#{{ tag }}</a>
               {% endfor %}
             </div>
+            
             <hr style="margin-bottom: 1rem;">
             
             {{ content }}
