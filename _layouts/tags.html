@@ -11,6 +11,26 @@ layout: compress
   <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <style>
+    .tag-heading {
+      font-size: 3rem;
+      margin: 3rem 0 2rem;
+      line-height: 3rem;
+      text-align: center;
+      color: #822193;
+    }
+
+    .tag-heading:before {
+      display: block;
+      margin: 0 auto;
+      transform: translateY(-1.25rem);
+      border-top: 5px dotted rgba(0,0,0,0.2);
+      content: " ";
+    }
+    .post-list>li:last-child {
+        border: none;
+    }
+  </style>
 </head>
 <body id="homepage">
   {% assign page_img = page.image | default: site.background.default-post %}
@@ -23,24 +43,7 @@ layout: compress
     <h3>{{ site.description }}</h3>
   </header>
   <main>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <article>
-            <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: '%d/%m/%Y' }}</time>
-            <h2>
-              <a href="{{ site.url }}{{ post.url }}" class="post-title">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-            </h2>
-            <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-            <div>
-              {% for tag in post.tags %}
-                  <a href="{{ site.url }}/tags#{{ tag }}">#{{ tag }}</a>
-              {% endfor %}
-            </div>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
+    {{ content }}
   </main>
   <footer></footer>
 </body>

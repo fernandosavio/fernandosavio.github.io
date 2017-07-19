@@ -61,6 +61,11 @@ article {
         }
     }
 
+    img {
+        display: block;
+        margin: 1rem auto;
+    }
+
     blockquote {
         background-color: fade-out($bg-purple, 0.8);
         padding: 0.5rem;

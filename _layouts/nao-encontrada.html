@@ -11,37 +11,23 @@ layout: compress
   <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  
+  <style>
+    header {
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
 </head>
-<body id="homepage">
+<body id="404">
   {% assign page_img = page.image | default: site.background.default-post %}
 
   <header style="background-image: linear-gradient(to top, black, transparent), url({{ site.data.backgrounds[page_img].url }});">
     <a href="{{ site.url }}" class="logo">
       <img src="{{ site.url }}/images/{{ site.logo }}">
     </a>
-    <h2>{{ site.title }}</h2>
-    <h3>{{ site.description }}</h3>
+    <h2>404 - Página não encontrada</h2>
+    <h3><a href="{{ site.url }}" style="border: 1px solid #9c27b0;padding: 0.5rem;border-radius: 3px;color: white;">Ver todos os artigos ⤾</a></h3>
   </header>
-  <main>
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li>
-          <article>
-            <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: '%d/%m/%Y' }}</time>
-            <h2>
-              <a href="{{ site.url }}{{ post.url }}" class="post-title">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-            </h2>
-            <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-            <div>
-              {% for tag in post.tags %}
-                  <a href="{{ site.url }}/tags#{{ tag }}">#{{ tag }}</a>
-              {% endfor %}
-            </div>
-          </article>
-        </li>
-      {% endfor %}
-    </ul>
-  </main>
-  <footer></footer>
 </body>
 </html>
