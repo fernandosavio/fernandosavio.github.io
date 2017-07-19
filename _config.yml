@@ -28,6 +28,13 @@ sass:
   style:            compressed
 
 
+compress_html:
+  clippings: all
+  comments:  ["<!-- ", " -->"]
+  endings:   all
+  profile: false
+
+
 # Defaults
 defaults:
   -

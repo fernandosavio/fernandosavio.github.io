@@ -48,6 +48,11 @@ header {
     & > .logo {
         display: inline-block;
         flex: 0 0 200px;
+
+        &:hover {
+            border: none;
+        }
+
     }
 
     & > h2 {
