@@ -7,8 +7,10 @@ layout: compress
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="alternate" type="text/rss+xml" href="{{ site.url }}/feed.xml">
   
   {% include metadata.html %}
+
 
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/post.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
@@ -30,10 +32,19 @@ layout: compress
             <h1 id="post-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
             <div>
               <time class="post-date" datetime="{{ page.date }}">{{ page.date | date: '%d/%m/%Y' }}</time>
-              Tags:
-              {% for tag in page.tags %}
-                <a class=tag href="{{ site.url }}/tags#{{ tag }}">#{{ tag }}</a>
-              {% endfor %}
+              {% capture words %}{{ content | number_of_words | minus: 180 }}{% endcapture %}
+              {% unless words contains "-" %}
+                {% assign minutes = words | plus: 180 | divided_by: 180 %}
+                <time class="read-time" datetime="{{ minutes }}m" style="opacity: 0.6; font-size: 0.85rem;">
+                    &#x1f4d6; {{ minutes }} minutos
+                </time>
+              {% endunless %}
+              <div>
+                Tags:
+                {% for tag in page.tags %}
+                  <a class=tag href="{{ site.url }}/tags#{{ tag }}" rel="tag">#{{ tag }}</a>
+                {% endfor %}
+              </div>
             </div>
             
             <hr style="margin-bottom: 1rem;">
@@ -60,8 +71,3 @@ layout: compress
   {% endif %}
 </body>
 </html>
-
-{% comment %}
-http://guide.bash.academy/commands/#
-https://jonassebastianohlsson.com/criticalpathcssgenerator/
-{% endcomment %}

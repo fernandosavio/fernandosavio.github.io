@@ -17,6 +17,8 @@ background:
 permalink:          /:title
 markdown:           kramdown
 highlighter:        rouge
+paginate:           10
+paginate_path:      "/:num/"
 kramdown:
   auto_ids:         true
   footnote_nr:      1
@@ -80,6 +82,7 @@ stackoverflow:      1284458/fernandosavio
 # Gems
 gems:
   - jekyll-feed
+  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-redirect-from

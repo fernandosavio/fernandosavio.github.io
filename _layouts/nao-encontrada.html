@@ -22,7 +22,7 @@ layout: compress
 <body id="404">
   {% assign page_img = page.image | default: site.background.default-post %}
 
-  <header style="background-image: linear-gradient(to top, black, transparent), url({{ site.data.backgrounds[page_img].url }});">
+  <header style="background-image: linear-gradient(to top, black, transparent), url(/{{ site.data.backgrounds[page_img].url }});">
     <a href="{{ site.url }}" class="logo">
       <img src="{{ site.url }}/images/{{ site.logo }}">
     </a>

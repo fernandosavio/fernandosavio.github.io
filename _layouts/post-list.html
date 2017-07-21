@@ -9,13 +9,19 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
+  
+  <link rel="alternate" type="text/rss+xml" href="{{ site.url }}/feed.xml">
+  
+  {% if paginator.previous_page %}<link rel="prev" href="{{ site.url }}{{ paginator.previous_page_path }}">{% endif %}
+  {% if paginator.next_page %}<link rel="next" href="{{ site.url }}{{ paginator.next_page_path }}">{% endif %}
+    
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
 </head>
 <body id="homepage">
   {% assign page_img = page.image | default: site.background.default-post %}
 
-  <header style="background-image: linear-gradient(to top, black, transparent), url({{ site.data.backgrounds[page_img].url }});">
+  <header style="background-image: linear-gradient(to top, black, transparent), url(/{{ site.data.backgrounds[page_img].url }});">
     <a href="{{ site.url }}" class="logo">
       <img src="{{ site.url }}/images/{{ site.logo }}">
     </a>
@@ -24,24 +30,37 @@ layout: compress
   </header>
   <main>
     <ul class="post-list">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
         <li>
           <article>
             <time class="post-date" datetime="{{ post.date }}">{{ post.date | date: '%d/%m/%Y' }}</time>
             <h2>
-              <a href="{{ site.url }}{{ post.url }}" class="post-title">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+              <a href="{{ site.url }}{{ post.url }}" rel="bookmark" class="post-title">{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
             </h2>
             <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
             <div>
               {% for tag in post.tags %}
-                  <a href="{{ site.url }}/tags#{{ tag }}">#{{ tag }}</a>
+                  <a href="{{ site.url }}/tags#{{ tag }}" rel="tag">#{{ tag }}</a>
               {% endfor %}
             </div>
           </article>
         </li>
       {% endfor %}
     </ul>
+    <footer>
+      {% if paginator.total_pages > 1 %}
+        {% if paginator.previous_page %}
+          <a class="pagination prev" href="{{ site.url }}{{ paginator.previous_page_path }}" rel="prev">
+            <span>Página {{ paginator.previous_page }}</span>
+          </a>
+        {% endif %}
+        {% if paginator.next_page %}
+          <a class="pagination next" href="{{ site.url }}{{ paginator.next_page_path }}" rel="next">
+            <span>Página {{ paginator.next_page }}</span>
+          </a>
+        {% endif %}
+      {% endif %}
+    </footer>
   </main>
-  <footer></footer>
 </body>
 </html>
