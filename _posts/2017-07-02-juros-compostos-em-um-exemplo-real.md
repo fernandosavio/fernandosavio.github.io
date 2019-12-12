@@ -252,7 +252,7 @@ print(ceil(n) + 1)
 [Gists]: https://gist.github.com/
 
 [Repl.it]: https://repl.it/ "Repl.it"
-[replit.exercicio]: https://repl.it/student/submissions/1205616 "6.4. While: Jogging"
+[replit.exercicio]: https://repl.it/student/submissions/1205564 "6.4. While: Jogging"
 [replit.comunidade]: https://repl.it/community "Cursos disponíveis gratuitamente na plataforma"
 [replit.estudante]: https://repl.it/student "Cursos incritos"
 [replit.curso]: https://repl.it/student/classrooms/17929 "Auto-Graded Course with Solutions"
